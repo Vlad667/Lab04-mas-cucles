@@ -52,3 +52,4 @@ int z(int*mas, int i){
 
 
       
+      
