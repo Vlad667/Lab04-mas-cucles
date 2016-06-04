@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 	for(i = 0; i < 10; i++)
 	printf("\tmas[%d] = %d\n ", i, obrat[i]);
 		
-	
+	system("pause");
 	return 0;
 }
 
@@ -69,3 +69,4 @@ int main(int argc, char *argv[]) {
 }
 }
 }
+
