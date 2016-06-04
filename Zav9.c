@@ -47,6 +47,7 @@
 	mas[maxi] = x;
 
 
+
 	for (i=0;i<n;i++)
 	printf("\nmas[%d] = %d", i, mas[i]);
     system("pause");	
