@@ -37,5 +37,6 @@ int main ()
 	printf("\nKolichestvo = %d", kilkist);
 	
     system("pause");	
+    
 	return 0;	
 }
