@@ -51,3 +51,4 @@ printf ("\n\tProizvedenie = %d", proizvedenie);
     return 0;
 	
 }
+
