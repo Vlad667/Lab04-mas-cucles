@@ -51,8 +51,8 @@ int main ()
         printf("\nElement ne znayden");
    
     }
-       
+       system("pause");
 	return 0;
+
 	
-	system("pause");
 }
