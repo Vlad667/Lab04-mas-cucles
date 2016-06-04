@@ -55,6 +55,7 @@
 }
 
 int perev(int *mas, int n, int zn){
+	
 	int i;
 	for(i=0;i<n;i++)
 		if(zn == mas[i])
