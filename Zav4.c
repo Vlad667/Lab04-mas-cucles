@@ -17,23 +17,23 @@
     	scanf ("%d", &n);
 	
       printf ("\nVvedite Min rand = ");
-    	scanf ("%d", &min);
+    scanf ("%d", &min);
 	
     	printf ("\nVvedite Max rand = ");
-	    scanf ("%d", &max);
+	scanf ("%d", &max);
 	
                        srand(time(0));
 	
 	               for (i = 0; i < n; i++){
 	               mas[i] = get_random_int_min_max(min, max);
-		           printf("\nmas[%d] = %d", i, mas[i]);
+		       printf("\nmas[%d] = %d", i, mas[i]);
 	              }
 	
 	    for (i = 0; i < n; i++){
 		if (mas[i] > 0){
-			dodat =  dodat + 1;
+		dodat =  dodat + 1;
 		} else {
-			vid = vid + 1;
+		vid = vid + 1;
 		}
 	}
 	
