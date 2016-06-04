@@ -78,3 +78,4 @@
     array_output(mas, n);
     printf ("\n Time: %lf\n", (float) (finish - start) / CLOCKS_PER_SEC);
 }
+
