@@ -25,6 +25,7 @@ int get_random_int_min_max(int min_rand, int max_rand)
 	printf("\nsum = %d", sum);	
     
     system("pause");
+    
 	return 0;
 }
 
