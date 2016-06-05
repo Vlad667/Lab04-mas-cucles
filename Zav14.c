@@ -2,71 +2,93 @@
 #include <stdlib.h>
 #include <time.h>
 
-int vybor(int* mas);
+    int get_random_int_min_max(int min_rand, int max_rand)
+{
+    return min_rand + rand() % (max_rand - min_rand);
+}
 
-int main(int argc, char *argv[]) {
-	int mas[10], i, n, k = 0, obrat[10];
+    int findmax(int *mas, int n, int max2)
+{
+	int y, zn = max2;
+	int max = mas[max2];
+	
+	if(max2 == n)
+		return max2;
+	
+	for(y = max2; y < n; y++)
+		if(mas[y] > max) 
+        {
+		max = mas[y];
+		zn = y;
+		}	
+		
+	return zn;	
+}
+
+    void sort(int *mas, int n)
+{
+	int y, x, zn;
+	for(y = 0; y < n; y++) 
+    {
+		x = mas[y];
+		zn = findmax(mas, n, y);
+		mas[y] = mas[zn];
+		mas[zn] = x;
+	}
+}
+
+int main()
+{
+	int mas[100], y, n, flag = 0;
+	int min, max, znachenie;
+	
+	printf ("Razmer massiva = ");
+	scanf ("%d", &n);
+	
+	printf ("\n\Vvedite Min rand = ");
+	scanf ("%d", &min);
+	
+	printf ("\n\Vvedite Max rand = ");
+	scanf ("%d", &max);
 	
 	srand(time(0));
 	
-	for(i = 0; i < 10; i++){
-	
-    mas[i] = rand()%50;
-}
-	
-	vybor(mas);
-	
-	for(i = 0; i < 10; i++)
-	obrat[i] = mas[10-(i+1)];
-	
-	for( i = 0; i < 10; i++)
-	printf("\tmas[%d] = %d\n", i, obrat[i]);
-	
-	printf("Vvedite N = ");
-	scanf("%d", &n);
-	
-	for(i=10-1,mas[10+1]=0;i>=0;i--){
-	if(n >= mas[i])
-	mas[i + 1] = mas[i];
-	else {
-	mas[i + 1] = n;
-	k = 1;
-	break;
-			}	
+	for (y = 0; y < n; y++)
+    {
+		mas[y] = get_random_int_min_max(min, max);
+		printf("\nmas[%d] = %d", y, mas[y]);
 	}
 	
-	if(k == 0)
-		mas [0] = n;
-		
-	vybor(mas);
+	sort(mas, n);
 	
-	for(i = 0; i < 10; i++)
-	obrat[i] = mas[10-(i+1)];
+	for (y = 0; y < n; y++){
+	printf("\n\tmas[%d] = %d", y, mas[y]);
+	}
 	
-	for(i = 0; i < 10; i++)
-	printf("\tmas[%d] = %d\n ", i, obrat[i]);
+	printf ("\nEnter n = ");
+	scanf ("%d", &znachenie);
+	
+	for(y = (n - 1), mas[n + 1] = 0; y >= 0; y--) 
+    {
+		if(znachenie >= mas[y])
+			mas[y + 1] = mas[y];
+		else {
+			mas[y + 1] = znachenie;
+			flag = 1;
+			break;
+		}	
+	}
+	
+	if(flag == 0)
+    {
+		mas[0] = n;
+	}
 		
+	for (y = 0; y < (n + 1); y++)
+    {
+		printf("\nmas[%d] = %d", y, mas[y]);
+	}
+	
 	system("pause");
 	return 0;
 }
-
-        int vybor(int* mas){
-	    int i, f, i_m, m, j;
-		for(i=0;i<10-1;i++){
-		f = 0;
-		i_m = i;
-		m = mas[i];
-		for(j = i + 1; j < 10; j++){
-		if(mas[j] < m ){
-		m = mas[j];
-		i_m = j;
-		f = 1;
-		}
-		}
-		if(f){
-		mas[i_m] = mas[i];
-		mas[i] = m ;
-}
-}
-}
-
