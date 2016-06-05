@@ -21,15 +21,16 @@ int main ()
 	
 	srand(time(0));
 	
-	for(i = 0; i < n; i++) {
+	for(i = 0; i < n; i++) 
+    {
 		mas[i] = get_random_int_min_max(min, max);
 		printf("\nmas[%d] = %d", i, mas[i]);
 	}
 	
-	for (i = 0; i < n; i++) {
-		if(((i % 2) == 0) && (mas[i] > 0)){
-			proizved *= mas[i];
-			kilkist = kilkist + 1;
+	for (i = 0; i < n; i++) 
+    {
+		if(((ived *= mas[i];
+		kilkist = kilkist + 1;
 		}
 	}	
 	
@@ -39,4 +40,6 @@ int main ()
     system("pause");	
     
 	return 0;	
-}
+} % 2) == 0) && (mas[i] > 0))
+        {
+		proiz
