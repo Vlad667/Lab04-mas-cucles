@@ -28,6 +28,7 @@ int perevirka(int * mas, int i)
 	}	
 	
 	
+	
 	for(i = 0; i < 15; i++)
 	printf("\nMassiv[%d]=%d", i, massiv[i]);
 	system("pause");
